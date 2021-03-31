@@ -11,7 +11,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./backend_stuff/tsconfig.json",
+    "project": "./tsconfig.json",
     "ecmaVersion": 11,
     "sourceType": "module"
   },
@@ -24,7 +24,8 @@
     "@typescript-eslint/restrict-plus-operands": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    // "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       { "argsIgnorePattern": "^_" }
@@ -33,6 +34,7 @@
     "indent": ["warn", 2],
     "linebreak-style": ["warn", "windows"],
     "quotes": ["warn", "single"],
+    "max-len": ["warn", 80],
     "eqeqeq": "warn",
     "no-trailing-spaces": "warn",
     "object-curly-spacing": ["warn", "always"],
