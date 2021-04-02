@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+  {
+    "id": "c4773c6e-f723-22e9-8f0b-362b9e175690",
+    "name": "Matti Newsome",
+    "dateOfBirth": "1971-04-10",
+    "ssn": "090471-8891",
+    "gender": "male",
+    "occupation": "Digital cook"
+  }

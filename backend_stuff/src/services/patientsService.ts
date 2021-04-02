@@ -1,5 +1,5 @@
 import patients from '../../data/patients'
-import { PatientDisplayData } from '../types'
+import { Patient, PatientDisplayData } from '../types'
 
 const getAll = (): PatientDisplayData[] => {
   return patients.map(({
@@ -8,12 +8,17 @@ const getAll = (): PatientDisplayData[] => {
     return {
       id, name, dateOfBirth, gender, occupation
     }
-  }
-  )
+  })
+}
+
+const create = (patient: Patient): Patient => {
+  patients.push(patient)
+  return patient
 }
 
 const patientsService = {
-  getAll
+  getAll,
+  create
 }
 
 export default patientsService
