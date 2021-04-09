@@ -16,12 +16,29 @@
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-unsafe-member-access": 0,
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      "warn",
       { "argsIgnorePattern": "^_" }
     ],
     "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets"
+      }
+    ],
     "no-case-declarations": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-single"]
   },
   "settings": {
     "react": {
@@ -31,6 +48,6 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./frontend_stuff/tsconfig.json"
+    "project": "./tsconfig.json"
   }
 }
